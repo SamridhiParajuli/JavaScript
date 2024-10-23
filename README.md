@@ -27,3 +27,10 @@ features:
 `some
 text`  
 -> 'some\ntext'
+
+
+Naming conventions
+- camelCase
+- PascalCase
+- kebab-case (doesn't work in javascript however we can use in html and css)
+- snake_case
