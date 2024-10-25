@@ -8,6 +8,7 @@
     <body>
   
     <script>
+        /*
        const product = {
         name: 'socks',
         price: 1090
@@ -25,6 +26,98 @@
 
        delete product.newProperty;
        console.log(product);
+       */
+      /*
+      const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating : {
+            stars : 4.5,
+            count : 87
+        },
+        fun : function function1() {
+            console.log("function inside object as function is just a value in javascript");
+        }
+        // function inside the object is called method. 
+      };
+
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+      console.log(product2.rating.count);
+      product2.fun();
+      console.log(typeof console);
+    //   Math.random = object.function = method
+    //convert from javascript to json
+    console.log(JSON.stringify(product2)); //typeof is string
+
+    //convert from JSON to javascript 
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+    */
+
+    //autoboxing
+
+    //objects can have properties and methods other value also have properties and methods 
+    console.log('Hello'.length) //length property tells the length of Hello
+    console.log('Hello'.toUpperCase());
+   
+    //objects are references the 
+
+    const object1 = { //object 1 is the reference that points to the message like google shortcuts
+        message : 'hello' //this is actually stored in a computer memory
+    };
+    //copy by reference
+    //this is done to increase the effeciency of the program
+    const object2 = object1; //so this doesn't actually copy the object it makes copy of the reference that points to the object
+
+    object1.message = 'good job';
+    console.log(object1);
+    console.log(object2); //good job
+    //we are able to change the message although it is a const it is because object1 just contains reference that points to the message 
+    // so const prevents us from changing the reference in the variable but it doesn't prevent us from reaching the object and changing the object that it is pointing to
+    // we cannot compare objects directly
+    const object3 = { 
+        message : 'good job' 
+    };
+
+    console.log(object1===object3);
+
+    //compares the references and not the objects so it gives false as they have different references
+
+    console.log(object1===object2); //true same reference
+    //shortcut for objects
+    const object4 = { 
+        message : 'good job',
+        price : 799
+    };
+    //const message = object4.message; // we want to put the name of variable same as the object
+    const {message, price} =  object4; //destructuring
+    console.log(message);
+    console.log(price);
+
+    //shorthand property
+        const object5 = {
+            // message : message
+            message
+        };
+        console.log(object5);
+
+    //shorthand method 
+        const object6 = {
+            message,
+            //method: function function1() {
+                //console.log('method');
+            //}
+            method(){
+                console.log('method')
+            }
+        };
+
+        console.log(object6);
+        object6.method();
+
     </script>
     </body>
 </html>
