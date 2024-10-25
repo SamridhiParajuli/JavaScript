@@ -3,7 +3,7 @@
 Math with JavaScript
 
 -order pf precedence 
-() * / + -
+() * / + -  comparision operators logical operators
 
 - calculating the cents first and rounding to dollars /100
 rounding the numbers to nearest integers Math.round()
@@ -34,3 +34,20 @@ Naming conventions
 - PascalCase
 - kebab-case (doesn't work in javascript however we can use in html and css)
 - snake_case
+
+logical operators 
+and Or Not
+
+
+Truthy and Falsy 
+
+Falsy are : 0 '' Nan false undefined Null apart from this all value are truthy
+
+functions:
+
+return: returns the value out of the function
+the functions ends after the return statement
+
+so apart from using local and gloabl variables we can just return the value
+
+parameter : puts the value into the function
